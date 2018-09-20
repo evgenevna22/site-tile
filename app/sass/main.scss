@@ -1,0 +1,65 @@
+@import "vars";
+@import "mixins";
+@import "blocks/about-us";
+@import "blocks/features";
+@import "blocks/news";
+@import "blocks/profile";
+@import "blocks/info";
+@import "page/layout";
+@import "page/page-header";
+@import "page/page-main";
+@import "page/page-footer";
+@import "page/indentation";
+@import "page/content-wrapper";
+
+html {
+  font-family: $default-font;
+  box-sizing: border-box;
+  color: $text;
+}
+
+body {
+  background-color: #fff;
+}
+
+*, *:before, *:after, a {
+  box-sizing: inherit;
+}
+
+ul, li, h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+	margin-bottom: 0;
+}
+
+li {
+	text-decoration: none;
+	list-style: none;
+}
+
+img {
+	width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $default-font; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+@import "media";
+
+

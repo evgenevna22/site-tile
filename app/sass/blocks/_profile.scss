@@ -1,0 +1,31 @@
+.profile {
+  @include parent();
+  order: 15;
+  @media (max-width: $width-min) {
+    display: none;
+  }
+}
+
+.profile__wrapper {
+  display: flex;
+  width: calc(50% - .5rem);
+  flex-direction: column;
+}
+
+.profile__item {
+  @include size();
+  width: 100%;
+  background-color: #e3ebd3;
+  &--user {
+    @include size();
+    height: auto;
+    align-self: stretch;
+  }
+}
+.profile__item-img {
+  width: 100%;
+  height: 100%;
+  &:hover {
+    filter: blur(5px)
+  }
+}

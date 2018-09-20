@@ -1,0 +1,33 @@
+.news {
+  @include parent();
+  text-align: center;
+  order: 10;
+  @media (min-width: $width-min) {
+    order: -10;
+  }
+}
+.news__item {
+  @include size();
+  min-height: calc(359px * 2);
+  padding: 1rem;
+  background-color: #a2a9b7;
+  overflow: scroll;
+  &--story {
+    @include size();
+    height: auto;
+    align-self: stretch;
+  }
+  @media (min-width: $width-min) {
+    padding: 1.5rem;
+  }
+}
+.news__list-items {
+  display: flex;
+  width: calc(50% - .5rem);
+  flex-direction: column;
+}
+.news__list-item {
+  @include size();
+  width: 100%;
+  background-color: #a2a9b7;
+}

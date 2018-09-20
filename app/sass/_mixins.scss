@@ -1,0 +1,11 @@
+@mixin parent {
+  width: 100%;
+  display: flex;
+}
+
+@mixin size {
+  width: calc(50% - .5rem);
+  min-height: 359px;
+  height: 359px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,10 @@
+.content-wrapper {
+  display: flex;
+  &--column {
+    flex-direction: column;
+    order: 0;
+  }
+  @media (min-width: $width-min) {
+    flex-direction: row;
+  }
+}

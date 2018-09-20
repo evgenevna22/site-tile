@@ -1,0 +1,10 @@
+.container {
+  min-width: 320px;
+  border: 1px solid darkred;
+  @media (min-width: $width-min){
+    width: 100%;
+    max-width: $width-max;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}

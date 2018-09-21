@@ -1,15 +1,15 @@
 @import "vars";
 @import "mixins";
-@import "blocks/about-us";
-@import "blocks/features";
-@import "blocks/news";
-@import "blocks/profile";
-@import "blocks/info";
+@import "blocks/tile";
+//@import "blocks/features";
+@import "blocks/square";
+//@import "blocks/profile";
+//@import "blocks/info";
 @import "page/layout";
 @import "page/page-header";
 @import "page/page-main";
 @import "page/page-footer";
-@import "page/indentation";
+@import "page/indent";
 @import "page/content-wrapper";
 
 html {
@@ -59,7 +59,5 @@ textarea {
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
-
-@import "media";
 
 

@@ -1,0 +1,15 @@
+.indent {
+  &--right {
+    margin-right: 1rem;
+  }
+  &--bottom {
+    margin-bottom: 1rem;
+  }
+}
+.align {
+  &--column {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-right: 0;
+  }
+}

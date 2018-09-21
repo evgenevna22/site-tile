@@ -1,9 +1,6 @@
+/*
 .profile {
   @include parent();
-  order: 15;
-  @media (max-width: $width-min) {
-    display: none;
-  }
 }
 
 .profile__wrapper {
@@ -29,3 +26,4 @@
     filter: blur(5px)
   }
 }
+*/

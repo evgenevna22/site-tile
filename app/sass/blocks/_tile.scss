@@ -1,0 +1,90 @@
+.tile {
+  @include parent();
+  flex-wrap: wrap;
+  @media (min-width: $width-min) {
+    margin-right: 1rem;
+  }
+  &.first {
+    .tile__item {
+      &:nth-of-type(1) {
+        @media (min-width: $width-min) {
+          flex: 0 0 calc(66% - .5rem);
+          margin-right: 1rem;
+        }
+      }
+      &:nth-of-type(2) {
+        order: -10;
+        margin-right: 0;
+        @media (min-width: $width-min) {
+          order: -20;
+          margin-right: 1rem;
+        }
+      }
+      &:nth-of-type(3) {
+        order: -20;
+        margin-right: 1rem;
+        @media (min-width: $width-min) {
+          order: -15;
+        }
+      }
+      &:nth-of-type(4) {
+        @media (min-width: $width-min) {
+          order: -10;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &.third {
+    .tile__item {
+      @media (min-width: $width-min) {
+        &:nth-of-type(1) {
+          flex: 0 0 calc(66% - .5rem);
+          order: -15;
+        }
+        &:nth-of-type(2) {
+          order: -20;
+        }
+        &:nth-of-type(4) {
+          order: -5;
+        }
+        &:nth-of-type(5) {
+          order: -10;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.tile__item {
+  @include size();
+  &--double {
+    flex: 1 0 100%;
+  }
+}
+
+.first {
+  @media (min-width: $width-min) {
+    order: 10;
+  }
+}
+
+.lightgray {
+  background-color: #e8ebed;
+}
+.blue {
+  background-color: #90bce8;
+}
+.yellow {
+  background-color: #febf26;
+}
+.orange {
+  background-color: #ffaa87;
+}
+.plum {
+  background-color: #c7abd4;
+}
+.tomato {
+  background-color: #f55e62;
+}

@@ -1,11 +1,17 @@
 @mixin parent {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 @mixin size {
-  width: calc(50% - .5rem);
-  min-height: 359px;
-  height: 359px;
+  flex-basis: calc(50% - .5rem);
+  min-height: 157px;
+  height: 157px;
+  max-height: 157px;
   margin-bottom: 1rem;
+  overflow: auto;
+  @media (min-width: $width-min) {
+    flex-basis: calc(32.56% - .5rem);
+  }
 }

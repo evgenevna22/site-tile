@@ -11,12 +11,14 @@
 
 html {
   font-family: $default-font;
+  font-size: 14px;
+  line-height: 26px;
   box-sizing: border-box;
   color: $text;
 }
 
 body {
-  background-color: #fff;
+  margin: 0;
 }
 
 *, *:before, *:after, a {

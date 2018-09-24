@@ -1,24 +1,30 @@
 .square-grid {
   @include parent();
-  text-align: center;
 }
 .square-grid__item {
   position: relative;
   overflow: auto;
   &--double {
     font-size: 18.11px;
-    flex-basis: 66%;
+    line-height: 26px;
+    flex-basis: 65%;
+    text-align: center;
+    @media all and (-ms-high-contrast:none) {
+      flex-basis: 64.5%;
+    }
     .square-grid__content {
       top: 0;
       bottom: auto;
-      padding: 28px 23px;
+      padding: 30px 25px;
     }
     .square-grid__content-img {
       overflow: hidden;
     }
   }
   @media (min-width: $width-min) {
-    padding: 1.5rem;
+    &--double {
+      flex-basis: 66%;
+    }
   }
 }
 
@@ -26,7 +32,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 10px 17px;
+  padding: 6px 10px;
 }
 
 .square-grid__content-img {
@@ -58,8 +64,10 @@
     border-radius: 50%;
   }
   .square-grid__content {
+    width: 100%;
     height: 100%;
     padding: 0;
+    overflow: hidden;
   }
 }
 
@@ -67,12 +75,22 @@
   display: flex;
   flex-basis: calc(33% - 4px);
   flex-direction: column;
+  @media all and (-ms-high-contrast:none) {
+    flex-basis: 32%;
+  }
+  @media (min-width: $width-min) {
+    flex-basis: 31%;
+    flex-grow: 1;
+  }
 }
 .square-grid__list-item {
   position: relative;
   flex-basis: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 99%;
   overflow: auto;
+  @media (min-width: $width-min) {
+    padding-bottom: 99.5%;
+  }
 }
 
 .second {

@@ -1,6 +1,5 @@
 .container {
   min-width: 320px;
-  padding-top: 10px;
   @media (min-width: $width-min){
     width: 100%;
     max-width: $width-max;

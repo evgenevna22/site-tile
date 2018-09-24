@@ -1,5 +1,8 @@
 .page-main {
   display: flex;
   flex-direction: column;
-  padding: 10px 13px 0;
+  padding: 10px 0 0;
+  @media (min-width: $width-min) {
+    padding: 10px 12px 0 14px;
+  }
 }

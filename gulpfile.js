@@ -32,17 +32,17 @@ gulp.task('sass', function () {
 gulp.task('html', function() {
   return gulp.src('app/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task("images", function() {
   return gulp.src("app/img/**/*.{png,jpg,gif}")
-    .pipe(gulp.dest("dist/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("fonts", function() {
   return gulp.src("app/fonts/**/*")
-    .pipe(gulp.dest("dist/fonts"));
+    .pipe(gulp.dest("build/fonts"));
 });
 
 gulp.task('watch', ['sass', 'browser-sync'], function () {
@@ -50,14 +50,14 @@ gulp.task('watch', ['sass', 'browser-sync'], function () {
   gulp.watch('app/*.html', browserSync.reload);
 });
 
-gulp.task('build', ['removedist', 'sass', 'html', 'images', 'fonts'], function () {
+gulp.task('build', ['removebuild', 'sass', 'html', 'images', 'fonts'], function () {
   const buildCss = gulp.src([
     'app/css/main.min.css'
-  ]).pipe(gulp.dest('dist/css'));
+  ]).pipe(gulp.dest('build/css'));
 });
 
-gulp.task('removedist', function () {
-  return del.sync('dist');
+gulp.task('removebuild', function () {
+  return del.sync('build');
 });
 gulp.task('clearcache', function () {
   return cache.clearAll();
